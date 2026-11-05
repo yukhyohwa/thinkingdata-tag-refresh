@@ -1,4 +1,4 @@
-# thinkingdata-tag-refresher
+# thinkingdata-tags-refresher
 
 Automatically navigates to the ThinkingData tag management page, logs in if needed (using a persistent browser session), and clicks the **刷新 (Refresh)** button.
 
@@ -24,7 +24,7 @@ TA_URL=http://8.211.141.76:8993/
 TA_USER=your_username
 TA_PASS=your_password
 TAG_URL=http://8.211.141.76:8993/#/tag/tag/1?currentProjectId=16
-SESSION_DIR=C:/path/to/thinkingdata-tag-refresher/ta_session
+SESSION_DIR=C:/path/to/thinkingdata-tags-refresher/ta_session
 ```
 
 ### 3. First Login (save session)
@@ -49,8 +49,8 @@ In **Task Scheduler**, create a new task:
 
 | Field | Value |
 |---|---|
-| **Program/script** | `C:\path\to\thinkingdata-tag-refresher\run_refresh.bat` |
-| **Start in** | `C:\path\to\thinkingdata-tag-refresher\` |
+| **Program/script** | `C:\path\to\thinkingdata-tags-refresher\run_refresh.bat` |
+| **Start in** | `C:\path\to\thinkingdata-tags-refresher\` |
 | **Trigger** | Set your preferred schedule (e.g. daily, hourly) |
 | **Run whether user is logged on or not** | ✅ Highly Recommended (Runs in background) |
 
