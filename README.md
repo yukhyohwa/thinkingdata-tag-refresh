@@ -1,5 +1,7 @@
 # thinkingdata-tags-refresher
 
+Repository: [yukhyohwa/thinkingdata-tags-refresher](https://github.com/yukhyohwa/thinkingdata-tags-refresher).
+
 Automatically navigates to the ThinkingData tag management page, logs in if needed (using a persistent browser session), and clicks the **刷新 (Refresh)** button.
 
 Designed to be run as a **Windows Scheduled Task**.
@@ -53,6 +55,8 @@ In **Task Scheduler**, create a new task:
 | **Start in** | `C:\path\to\thinkingdata-tags-refresher\` |
 | **Trigger** | Set your preferred schedule (e.g. daily, hourly) |
 | **Run whether user is logged on or not** | ✅ Highly Recommended (Runs in background) |
+
+After moving or renaming an existing checkout, update both the executable path and working directory of its existing scheduled task. Windows may require an administrator account to edit the task. A directory junction from the previous location can keep that task working until its paths are updated.
 
 > [!IMPORTANT]
 > **Prevention of Hanging Tasks:**

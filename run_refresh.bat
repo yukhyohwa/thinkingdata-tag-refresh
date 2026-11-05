@@ -1,6 +1,6 @@
 @echo off
 :: ============================================================
-:: FiveCross TA Tag Refresher
+:: thinkingdata-tags-refresher
 :: Designed for Windows Task Scheduler
 :: ============================================================
 

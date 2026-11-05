@@ -1,6 +1,6 @@
 @echo off
 :: ============================================================
-:: FiveCross TA Tag Refresher — Setup Script
+:: thinkingdata-tags-refresher — Setup Script
 :: Run this ONCE to create venv and install dependencies
 :: ============================================================
 cd /d "%~dp0"
