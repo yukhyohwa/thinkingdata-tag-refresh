@@ -1,6 +1,6 @@
-# thinkingdata-tags-refresher
+# thinkingdata-tag-refresh
 
-Repository: [yukhyohwa/thinkingdata-tags-refresher](https://github.com/yukhyohwa/thinkingdata-tags-refresher).
+Repository: [yukhyohwa/thinkingdata-tag-refresh](https://github.com/yukhyohwa/thinkingdata-tag-refresh).
 
 Automatically navigates to the ThinkingData tag management page, logs in if needed (using a persistent browser session), and clicks the **刷新 (Refresh)** button.
 
@@ -26,7 +26,7 @@ TA_URL=http://8.211.141.76:8993/
 TA_USER=your_username
 TA_PASS=your_password
 TAG_URL=http://8.211.141.76:8993/#/tag/tag/1?currentProjectId=16
-SESSION_DIR=C:/path/to/thinkingdata-tags-refresher/ta_session
+SESSION_DIR=C:/path/to/thinkingdata-tag-refresh/ta_session
 ```
 
 ### 3. First Login (save session)
@@ -51,8 +51,8 @@ In **Task Scheduler**, create a new task:
 
 | Field | Value |
 |---|---|
-| **Program/script** | `C:\path\to\thinkingdata-tags-refresher\run_refresh.bat` |
-| **Start in** | `C:\path\to\thinkingdata-tags-refresher\` |
+| **Program/script** | `C:\path\to\thinkingdata-tag-refresh\run_refresh.bat` |
+| **Start in** | `C:\path\to\thinkingdata-tag-refresh\` |
 | **Trigger** | Set your preferred schedule (e.g. daily, hourly) |
 | **Run whether user is logged on or not** | ✅ Highly Recommended (Runs in background) |
 
@@ -84,3 +84,7 @@ python main.py --login --show  # Force re-login with visible browser
 - **Refresh button not found** → Check `logs/` or run with `--show` to see what the page looks like.
 - **Login fails** → Run `python main.py --login --show` to observe the login process visually.
 - **Session expired** → Run `python main.py --login` to clear the old session and re-authenticate.
+
+## Local scheduled-task compatibility
+
+The existing Windows task still points to `thinkingdata-tag-refresher/run_refresh.bat`; changing that task was denied by Windows permissions. A local directory junction named `thinkingdata-tag-refresher` points to this checkout at `thinkingdata-tag-refresh`, keeping that task and older virtual-environment launchers usable. New tasks and documentation should use `thinkingdata-tag-refresh`.

@@ -1,5 +1,5 @@
 """
-thinkingdata-tags-refresher
+thinkingdata-tag-refresh
 ==========================
 Entry point. Parses CLI args and runs the refresh workflow.
 
@@ -221,7 +221,7 @@ def run(headless: bool = True, force_login: bool = False) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="thinkingdata-tags-refresher"
+        description="thinkingdata-tag-refresh"
     )
     parser.add_argument("--show",  action="store_true", help="Show browser window.")
     parser.add_argument("--login", action="store_true", help="Force re-login.")

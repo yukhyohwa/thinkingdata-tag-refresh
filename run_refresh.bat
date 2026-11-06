@@ -1,6 +1,6 @@
 @echo off
 :: ============================================================
-:: thinkingdata-tags-refresher
+:: thinkingdata-tag-refresh
 :: Designed for Windows Task Scheduler
 :: ============================================================
 

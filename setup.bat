@@ -1,6 +1,6 @@
 @echo off
 :: ============================================================
-:: thinkingdata-tags-refresher — Setup Script
+:: thinkingdata-tag-refresh — Setup Script
 :: Run this ONCE to create venv and install dependencies
 :: ============================================================
 cd /d "%~dp0"
